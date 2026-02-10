@@ -7,7 +7,7 @@
     media-downloader
     #obs-studio
     #pavucontrol
-    soundwireserver
+    #soundwireserver
     #video-trimmer
     vlc
 
@@ -27,3 +27,4 @@
     tiled
   ];
 }
+
