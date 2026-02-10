@@ -4,6 +4,7 @@
     ./nixpkgs.nix
     ./bootloader.nix
     ./xserver.nix
+    ./gnome.nix
     ./network.nix
     ./pipewire.nix
     ./security.nix
@@ -14,3 +15,4 @@
     ./virtualization.nix
   ];
 }
+
