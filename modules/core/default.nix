@@ -13,6 +13,8 @@
     ./user.nix
     ./wayland.nix
     ./virtualization.nix
+    ./noctalia.nix
   ];
 }
+
 
