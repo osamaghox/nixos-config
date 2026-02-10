@@ -1,7 +1,11 @@
 { pkgs, ... }:
 {
   # imports = [ inputs.nix-gaming.nixosModules.default ];
+
   nix = {
+  channel = {
+     enable = false;
+  };
     settings = {
       auto-optimise-store = true;
       experimental-features = [
@@ -15,6 +19,8 @@
     wget
     git
   ];
+
+
 
   time.timeZone = "Asia/Aden";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -34,3 +40,4 @@
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
 }
+
