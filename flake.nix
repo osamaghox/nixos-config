@@ -18,6 +18,12 @@
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+};
+
     # Neovim Framework - nvf
     nvf = {
       url = "github:NotAShelf/nvf";
@@ -29,7 +35,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, nvf, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, noctalia, nvf, ... } @ inputs:
  let
       username = "osamaghox";
       system = "x86_64-linux";
