@@ -6,7 +6,7 @@
   ];
 
   # Bootloader for virutalbox only because its not real pc.
-  boot.loader.grub.enable = true;
+  boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
@@ -27,3 +27,4 @@
   };
 
 }
+
