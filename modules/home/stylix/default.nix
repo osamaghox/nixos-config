@@ -7,7 +7,10 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
     
     # ستعرف Stylix تلقائياً أنك تستخدم Niri وتقوم بتلوين الـ focus-ring
-    targets.niri.enable = true; 
+    targets = { 
+      niri.enable = true;
+      gtk.enable = true;
+     };
     
     cursor = {
       package = pkgs.bibata-cursors;
