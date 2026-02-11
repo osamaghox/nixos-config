@@ -1,10 +1,6 @@
 { pkgs, lib, config, ... }:
 
 {
-  # تفعيل حزمة wlr-which-key
-  home.packages = [ pkgs.wlr-which-key ];
-
-  programs.niri.enable = true;
   programs.niri.settings = {
     # This config is in the KDL format: https://kdl.dev
     # Check the wiki for a full description of the configuration:
