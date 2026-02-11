@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }:
+{ pkgs, ... }:
 {
     # configure options
     programs.noctalia-shell = {
@@ -25,5 +25,6 @@
       # this may also be a string or a path to a JSON file.
     };
   }
+
 
 
