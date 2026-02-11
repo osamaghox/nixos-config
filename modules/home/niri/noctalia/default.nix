@@ -4,10 +4,12 @@
 { ... }:
 {
   imports = [
+  inputs.noctalia.homeModules.default
     ./noctalia.nix
     ./colors.nix
   ];
 }
+
 
 
 
