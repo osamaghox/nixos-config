@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+
+  imports = [ inputs.noctalia.homeModules.default ];
+
   stylix = {
     enable = true;
     image = ./wallpapers/nature.jpg; # اختر صورتك المفضلة
