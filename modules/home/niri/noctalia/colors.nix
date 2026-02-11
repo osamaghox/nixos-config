@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+/*
     # configure options
     programs.noctalia-shell = {
       colors = {
@@ -23,7 +24,9 @@
       };
       # this may also be a string or a path to a JSON file.
     };
+*/
   }
+
 
 
 
