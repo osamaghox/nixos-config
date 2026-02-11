@@ -25,20 +25,10 @@ in
   # 2. إعدادات Niri
   programs.niri.settings = {
     binds = {
-      # في Niri نستخدم "Mod+Shift+Key" بدلاً من "SUPERSHIFT"
       "Mod+Shift+D".action.spawn = [
         (lib.getExe (mkMenu [
-           {
-             key = "f";
-             desc = "Firefox";
-             cmd = "firefox";
-           }
-           # يمكنك إضافة المزيد من العناصر هنا
-           {
-             key = "t";
-             desc = "Terminal";
-             cmd = "alacritty"; # أو التيرمينال الذي تستخدمه
-           }
+          { key = "f"; desc = "Firefox"; cmd = "firefox"; }
+          { key = "g"; desc = "Ghostty"; cmd = "ghostty"; }
         ]))
       ];
     };
