@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.hyprland = {
+  programs.niri = {
     enable = true;
   };
 
@@ -18,3 +18,4 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 }
+
