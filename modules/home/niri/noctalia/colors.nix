@@ -1,7 +1,5 @@
-{ pkgs, inputs, username ... }:
+{ pkgs, inputs, username, ... }:
 {
-  home-manager.users.${username} = {
-    # import the home manager module
     imports = [
       inputs.noctalia.homeModules.default
     ];
@@ -30,6 +28,5 @@
       };
       # this may also be a string or a path to a JSON file.
     };
-  };
+  }
 
-}
