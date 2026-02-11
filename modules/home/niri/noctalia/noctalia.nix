@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }:
+{ pkgs, ... }:
 {
       programs.noctalia-shell = {
         enable = true;
