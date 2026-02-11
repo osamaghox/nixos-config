@@ -1,17 +1,5 @@
 { pkgs, lib, config, ... }:
 
-let
-  # دالة إنشاء قائمة wlr-which-key
-  mkMenu = menu: let
-    configFile = pkgs.writeText "config.yaml" (lib.generators.toYAML {} {
-      anchor = "bottom-right";
-      inherit menu;
-    });
-  in
-    pkgs.writeShellScriptBin "my-menu" ''
-      exec ${lib.getExe pkgs.wlr-which-key} --config ${configFile}
-    '';
-in
 {
   # تفعيل حزمة wlr-which-key
   home.packages = [ pkgs.wlr-which-key ];
@@ -193,14 +181,6 @@ in
       # Exit/Quit
       "Mod+Shift+E".action.quit = [];
       "Mod+Shift+P".action.power-off-monitors = [];
-
-      # --- طلبك الخاص: تفعيل قائمة wlr-which-key بـ Super+Shift+D ---
-      "Mod+Shift+D".action.spawn = [
-        (lib.getExe (mkMenu [
-          { key = "f"; desc = "Firefox"; cmd = "firefox"; }
-          { key = "g"; desc = "Ghostty"; cmd = "ghostty"; }
-        ]))
-      ];
     };
   };
 }
