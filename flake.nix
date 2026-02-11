@@ -36,7 +36,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, noctalia, nvf, ... } @ inputs:
+  outputs = { self, nixpkgs, ... } @inputs:
  let
       username = "osamaghox";
       system = "x86_64-linux";
