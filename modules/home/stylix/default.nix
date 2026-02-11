@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.noctalia.homeModules.default ];
+  imports = [ inputs.stylix.homeModules.stylix ];
 
   stylix = {
     enable = true;
