@@ -2,7 +2,6 @@
 {
     # configure options
     programs.noctalia-shell = {
-      enable = true;
       colors = {
         # you must set ALL of these
         mError = "#dddddd";
@@ -25,6 +24,7 @@
       # this may also be a string or a path to a JSON file.
     };
   }
+
 
 
 
