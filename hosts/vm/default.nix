@@ -15,7 +15,6 @@
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.dragAndDrop = true;
   virtualisation.virtualbox.guest.clipboard = true;
-  virtualisation.virtualbox.guest.x11 = true;
 
 
   # allow local remote access to make it easier to toy around with the system
@@ -30,6 +29,7 @@
   };
 
 }
+
 
 
 
