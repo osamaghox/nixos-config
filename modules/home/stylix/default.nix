@@ -17,12 +17,24 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
+      size = 24;
     };
 
-    fonts = {
+fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
-        name = "JetBrainsMono Nerd Font";
+        # الطريقة الجديدة: استدعاء الخط مباشرة كحزمة منفصلة
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrains Mono Nerd Font";
+      };
+      
+      # Stylix يحتاج أحياناً لتعريف هذه القيم لتجنب أخطاء الـ null
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
     };
   };
