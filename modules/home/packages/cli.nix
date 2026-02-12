@@ -67,7 +67,7 @@
     file                              # Show file information
     jq                                # JSON processor
     killall
-    libnotify
+    # libnotify
     mimeo
     openssl
     # pamixer                           # pulseaudio command line mixer
@@ -83,4 +83,5 @@
     #wineWowPackages.waylandFull
   ];
 }
+
 
