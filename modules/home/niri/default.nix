@@ -8,13 +8,14 @@
   imports = [
     ./noctalia
   #  ./which-key
-#    ./niri.nix
+    ./niri.nix
 
   ];
-	xdg.configFile."niri/config.kdl".source = ./config.kdl;
+	# xdg.configFile."niri/config.kdl".source = ./config.kdl;
 	# xdg.configFile."swaylock/config".source = ./swaylock.conf;
   # home.file.".local/bin/nws.sh".source = ./nws.sh;
 }
+
 
 
 
