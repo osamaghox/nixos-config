@@ -24,7 +24,7 @@
     #hyperfine                         # benchmarking tool
     #pastel                            # cli to manipulate colors
     #scooter                           # Interactive find and replace in the terminal
-    #swappy                            # snapshot editing tool
+    swappy                             # snapshot editing tool
     #tdf                               # cli pdf viewer
     #tokei                             # project line counter
     #translate-shell                   # cli translator
@@ -67,21 +67,22 @@
     file                              # Show file information
     jq                                # JSON processor
     killall
-    # libnotify
+    libnotify
     mimeo
     openssl
-    # pamixer                           # pulseaudio command line mixer
-   # playerctl                         # controller for media players
+    pamixer                           # pulseaudio command line mixer
+    playerctl                         # controller for media players
     poweralertd
     udiskie                           # Automounter for removable media
     unzip
     wget
-  #  wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
+    wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     xdg-utils
 
     #winetricks
     #wineWowPackages.waylandFull
   ];
 }
+
 
 
