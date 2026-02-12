@@ -7,7 +7,7 @@
 {
   imports = [
     ./noctalia
-    ./which-key
+  #  ./which-key
 #    ./niri.nix
 
   ];
@@ -15,6 +15,7 @@
 	# xdg.configFile."swaylock/config".source = ./swaylock.conf;
   # home.file.".local/bin/nws.sh".source = ./nws.sh;
 }
+
 
 
 
