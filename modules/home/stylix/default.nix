@@ -6,7 +6,7 @@
   stylix = {
     enable = true;
    # image = ./wallpapers/nature.jpg; # اختر صورتك المفضلة
-   base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+   base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     
     # ستعرف Stylix تلقائياً أنك تستخدم Niri وتقوم بتلوين الـ focus-ring
     targets = { 
