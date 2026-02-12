@@ -4,12 +4,14 @@
     ./packages
     ./stylix
     ./git.nix
-    ./xdg-mimes.nix
     ./niri
+    ./emacs
+    ./xdg-mimes.nix
     ./zsh
     ./ghostty
 ];
 }
+
 
 
 
