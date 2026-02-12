@@ -7,7 +7,8 @@
       systemd-boot.configurationLimit = 10;
     };
 
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     supportedFilesystems = [ "ntfs" ];
   };
 }
+
