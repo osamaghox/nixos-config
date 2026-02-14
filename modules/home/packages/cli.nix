@@ -38,7 +38,8 @@
     ttyper                            # cli typing test
 
     ## Monitoring / fetch
-    htop
+    btop
+    neofetch
     onefetch                          # fetch utility for git repo
     wavemon                           # monitoring for wireless network devices
 
@@ -83,6 +84,7 @@
     #wineWowPackages.waylandFull
   ];
 }
+
 
 
 
