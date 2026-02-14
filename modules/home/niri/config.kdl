@@ -381,7 +381,7 @@ binds {
     Mod+D     hotkey-overlay-title="Noctalia: Launcher" { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+S     hotkey-overlay-title="Noctalia: Control Center" { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
    // Mod+Comma hotkey-overlay-title="Noctalia: Settings" { spawn "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kgx"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
