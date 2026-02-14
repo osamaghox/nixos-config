@@ -347,6 +347,20 @@ window-rule {
     clip-to-geometry true
 }
 
+// قاعدة شاملة لجميع النوافذ
+window-rule {
+    draw-border-with-background false
+    opacity 0.95
+}
+
+// نصيحة: استثناء المتصفح يفضل أن يكون في قاعدة منفصلة 
+// لضمان عدم تداخل الشروط
+window-rule {
+    match app-id="google-chrome"
+    opacity 1.0
+}
+
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
