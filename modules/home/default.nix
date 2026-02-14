@@ -8,9 +8,10 @@
     ./emacs
     ./xdg-mimes.nix
     ./zsh
-    ./ghostty
+    ./alacritty
 ];
 }
+
 
 
 
