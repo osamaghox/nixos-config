@@ -1,0 +1,18 @@
+scheme: "Fleur Light"
+author: "Fleur Lua Port"
+base00: "ffffff" # White (Background)
+base01: "EDEDED" # Gray1 (Lighter Background)
+base02: "B7B7B7" # Gray2 (Selection)
+base03: "939393" # Gray3 (Comments/Secondary)
+base04: "525252" # Gray5 (Light Foreground)
+base05: "141414" # Gray9 (Default Foreground/Text - Dark)
+base06: "323333" # Maomi (Darker Foreground)
+base07: "101010" # Black (Darkest Foreground)
+base08: "FF8080" # Coquelicot (Red)
+base09: "FFBA9D" # Zinnia (Orange)
+base0A: "FFBA9D" # Zinnia (Yellow - used Orange as fallback)
+base0B: "8ABE8A" # Bruyere (Green)
+base0C: "485571" # Anemone (Cyan slot - used Dark Blue for contrast on light)
+base0D: "6D89A7" # Bleuet (Blue)
+base0E: "485571" # Anemone (Purple)
+base0F: "C9D9D8" # Lis (Brown slot)
