@@ -12,7 +12,7 @@
     ./notifications
     ./screenshot
     ./xwayland-satellite
-
+    ./wallpaper-engine
   ];
 	# xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
@@ -26,6 +26,7 @@ xdg.configFile."niri/config.kdl".source =
 	# xdg.configFile."swaylock/config".source = ./swaylock.conf;
   # home.file.".local/bin/nws.sh".source = ./nws.sh;
 }
+
 
 
 
