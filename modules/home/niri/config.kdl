@@ -350,7 +350,7 @@ window-rule {
 // قاعدة شاملة لجميع النوافذ
 window-rule {
     draw-border-with-background false
-    opacity 0.95
+    opacity 0.98
 }
 
 // نصيحة: استثناء المتصفح يفضل أن يكون في قاعدة منفصلة 
