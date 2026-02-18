@@ -14,7 +14,7 @@
     Service = {
       # ملاحظة: تأكد من تغيير DP-1 لاسم شاشتك الحقيقي
       # وتغيير 12345678 لرقم المجلد الصحيح في الـ Workshop
-      ExecStart = "${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine --screen-root DP-1 ${config.home.homeDirectory}/Pictures/Wallpapers/Steam";
+      ExecStart = "${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine --screen-root DP-1 ${config.home.homeDirectory}/Pictures/Wallpapers/Steam/vagabond";
       Restart = "always";
       # لضمان عدم توقف الخدمة فوراً إذا تأخرت الواجهة في التحميل
       RestartSec = 3; 
