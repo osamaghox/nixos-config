@@ -4,10 +4,12 @@
     ## Lsp
     nixd # nix
 
+
     ## formating
     shfmt
     treefmt
     nixfmt
+    tree-sitter
 
     ## C / C++
     gcc
@@ -18,8 +20,12 @@
     valgrind
     llvmPackages_20.clang-tools
 
+    ## web
+    nodejs
+
     ## Python
     #python3
     #python312Packages.ipython
   ];
 }
+
