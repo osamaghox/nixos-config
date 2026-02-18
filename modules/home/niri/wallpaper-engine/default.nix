@@ -1,26 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  # إضافة الحزمة ليكون لديك اختصار لها في الترمينال (اختياري لكن مفيد)
-  home.packages = [ pkgs.linux-wallpaperengine ];
+  services.linux-wallpaperengine = {
+    enable = true;
+    
+    # حل مشكلة الـ assets التي واجهناها:
+    # الموديول يسمح لنا بتحديد المسار. سنستخدم المسار الموجود داخل الحزمة:
+    assetsPath = "${pkgs.linux-wallpaperengine}/share/linux-wallpaperengine/assets";
 
-  systemd.user.services.wallpaper-engine = {
-    Unit = {
-      Description = "Wallpaper Engine for Niri";
-      # نربط الخدمة بجلسة واي لاند لضمان التشغيل الصحيح مع Niri
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
-      # ملاحظة: تأكد من تغيير DP-1 لاسم شاشتك الحقيقي
-      # وتغيير 12345678 لرقم المجلد الصحيح في الـ Workshop
-      ExecStart = "${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine --screen-root DP-1 ${config.home.homeDirectory}/Pictures/Wallpapers/Steam/vagabond";
-      Restart = "always";
-      # لضمان عدم توقف الخدمة فوراً إذا تأخرت الواجهة في التحميل
-      RestartSec = 3; 
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
+    wallpapers = [
+      {
+        monitor = "DP-1"; # تأكد من اسم شاشتك
+        wallpaperId = "${config.home.homeDirectory}/Pictures/Wallpapers/Steam/2910465940";
+        scaling = "fill";
+        fps = 60;
+        audio.silent = true; # كتم الصوت إذا أردت
+      }
+    ];
   };
 }
