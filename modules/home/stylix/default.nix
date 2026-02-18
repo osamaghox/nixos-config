@@ -12,7 +12,7 @@
     
     # ستعرف Stylix تلقائياً أنك تستخدم Niri وتقوم بتلوين الـ focus-ring
     targets = { 
-      emacs.enable = false;
+      # emacs.enable = false;
       gtk.enable = true;
      };
     
