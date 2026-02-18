@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib,username, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -27,6 +27,15 @@
       PermitRootLogin = "yes";
     };
   };
+
+# تأكد من إضافة المستخدم لمجموعة vboxsf
+users.users.${username}.extraGroups = [ "vboxsf" ];
+
+fileSystems."/home/USER/windows-share" = {
+  device = "vb-windows-shared"; # نفس الاسم الذي وضعته في VirtualBox
+  fsType = "vboxsf";
+  options = [ "rw" "nofail" "uid=1000" "gid=1000" ];
+};
 
 }
 
