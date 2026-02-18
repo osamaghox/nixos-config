@@ -14,7 +14,7 @@
     Service = {
       # ملاحظة: تأكد من تغيير DP-1 لاسم شاشتك الحقيقي
       # وتغيير 12345678 لرقم المجلد الصحيح في الـ Workshop
-      ExecStart = "${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine --screen-root DP-1 ${config.home.homeDirectory}/.local/share/Steam/steamapps/workshop/content/431960/12345678";
+      ExecStart = "${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine --screen-root DP-1 ${config.home.homeDirectory}/Pictures/Wallpapers/Steam";
       Restart = "always";
       # لضمان عدم توقف الخدمة فوراً إذا تأخرت الواجهة في التحميل
       RestartSec = 3; 
