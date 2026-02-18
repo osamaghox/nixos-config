@@ -22,7 +22,6 @@
 
     # Node.js and npm (Essentials)
     nodejs
-    nodePackages.npm
 
     # TypeScript tools and LSP
     nodePackages.typescript
@@ -35,13 +34,14 @@
     nodePackages.vscode-langservers-extracted
 
     # Tailwind CSS LSP
-    nodePackages.tailwindcss-language-server
+    tailwindcss-language-server
 
     ## Python
     #python3
     #python312Packages.ipython
   ];
 }
+
 
 
 
