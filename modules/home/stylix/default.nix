@@ -12,7 +12,7 @@
     
     # ستعرف Stylix تلقائياً أنك تستخدم Niri وتقوم بتلوين الـ focus-ring
     targets = { 
-     # niri.enable = true;
+      emacs.enable = false;
       gtk.enable = true;
      };
     
@@ -24,12 +24,10 @@
 
 fonts = {
       monospace = {
-        # الطريقة الجديدة: استدعاء الخط مباشرة كحزمة منفصلة
         package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrains Mono Nerd Font";
       };
       
-      # Stylix يحتاج أحياناً لتعريف هذه القيم لتجنب أخطاء الـ null
       sansSerif = {
         package = pkgs.dejavu_fonts;
         name = "DejaVu Sans";
