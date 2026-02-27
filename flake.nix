@@ -72,6 +72,15 @@
             inherit self inputs username;
           };
         };
+
+        wsl = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/wsl ];
+          specialArgs = {
+            host = "wsl";
+            inherit self inputs username;
+          };
+        };
       };
     };
 }
