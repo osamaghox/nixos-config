@@ -8,7 +8,7 @@
 
     
   imports = [
-    nixos-wsl.nixosModules.default
+    inputs.nixos-wsl.nixosModules.default
     ./../../modules/core
   ];
 
@@ -39,3 +39,4 @@
 
 
   }
+
