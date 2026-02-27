@@ -8,6 +8,7 @@
 
     
   imports = [
+    nixos-wsl.nixosModules.default
     ./../../modules/core
   ];
 
@@ -35,5 +36,6 @@
     enableOnBoot = true;
     autoPrune.enable = true;
   };
+
 
   }
