@@ -1,0 +1,34 @@
+* tasks
+
+
+
+
+
+
+
+
+
+
+
+* Nixos on wsl2 need to delete this to get work minimal
+
+  احذف هذا
+services.upower.enable = true;
+
+
+
+  #  ./bootloader.nix
+
+ #   ./xserver.nix
+ #   ./gnome.nix
+ #   ./pipewire.nix
+
+
+    # ./niri
+
+# emacs
+
+تعمل شرط اذا كانت الجهاوز wsl لا يثبت تطبيقات معينة
+
+
+
