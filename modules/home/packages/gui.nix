@@ -25,8 +25,8 @@
     ## Level editor
     ldtk
     tiled
-    google-chrome
-    vscodium
+    #google-chrome
+    #vscodium
   ];
 }
 

@@ -9,6 +9,10 @@
    # ./hardware-configuration.nix
   ];
 
+systemSettings = {
 
-  
+      wsl.enable = true;
+      zsh.enable = true;
+};
+
 }

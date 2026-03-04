@@ -32,3 +32,9 @@ services.upower.enable = true;
 
 
 
+* كتابة جميع userSetinngs and systemSettings داخل wsl host
+
+فا بيكونين كامل داخل والي ما اريدهن بكتبهن
+
+example: 
+test.enable=false;

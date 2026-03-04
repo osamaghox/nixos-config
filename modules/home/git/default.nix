@@ -6,7 +6,7 @@
   programs.git = {
     enable = true;
     userName = "Osama";
-    userEmail = "osama@example.com";
+    userEmail = "osamaghox@gmail.com";
 
     # هنا يجب أن يوضع الـ extraConfig
     extraConfig = {

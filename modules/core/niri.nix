@@ -17,6 +17,9 @@ in
       enable = true;
     };
 
+  services.upower.enable = true;
+
+    
     # XDG Portals configuration for Wayland (niri)
     xdg.portal = {
       enable = true;
