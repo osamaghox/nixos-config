@@ -6,6 +6,7 @@
     ./wsl.nix
     ./xserver.nix
     ./gnome.nix
+    ./niri.nix
     ./network.nix
     ./pipewire.nix
     ./security.nix
@@ -13,8 +14,8 @@
     ./system.nix
     ./user.nix
     ./home-manager.nix
-    ./wayland.nix
     ./virtualization.nix
+    ./docker.nix
     ./zsh.nix
   ];
 }

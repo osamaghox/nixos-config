@@ -1,13 +1,25 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
+
+let
+  cfg = config.systemSettings.pipewire;
+in
 {
-  services.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # lowLatency.enable = true;
+  options = {
+    systemSettings.pipewire = {
+      enable = lib.mkEnableOption "Enable Pipewire";
+    };
   };
-  hardware.alsa.enablePersistence = true;
-  environment.systemPackages = with pkgs; [ pulseaudioFull ];
+
+  config = lib.mkIf cfg.enable {
+    services.pulseaudio.enable = false;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # lowLatency.enable = true;
+    };
+    hardware.alsa.enablePersistence = true;
+    environment.systemPackages = with pkgs; [ pulseaudioFull ];
+  };
 }
