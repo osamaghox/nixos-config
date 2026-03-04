@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.userSettings.niri;
+  cfg = config.systemSettings.niri;
 in
 {
 

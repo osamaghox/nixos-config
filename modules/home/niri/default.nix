@@ -4,13 +4,14 @@ let
   cfg = config.userSettings.niri;
 in
 {
+
+  imports = [ inputs.noctalia.homeModules.default ];
+
   options.userSettings.niri = {
     enable = lib.mkEnableOption "Enable Niri and associated tools";
   };
 
   config = lib.mkIf cfg.enable {
-
-    imports = [ inputs.noctalia.homeModules.default ];
 
     programs.noctalia-shell = {
       enable = true;

@@ -4,14 +4,15 @@ let
   cfg = config.userSettings.stylix;
 in
 {
+
+ imports = [ inputs.stylix.homeModules.stylix ];
+
   options.userSettings.stylix = {
-    enable = lib.mkEnableOption "Enable Stylix system-wide theming";
+    enable = lib.mkEnableOption "Enable Stylix user-wide theming";
   };
 
   config = lib.mkIf cfg.enable {
     
-    imports = [ inputs.stylix.homeModules.stylix ];
-
     stylix = {
       enable = true;
       

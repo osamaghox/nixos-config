@@ -1,28 +1,27 @@
-هل اقدر اسوي كذا الshell aliasses
-
 { config, lib, pkgs, host, ... }:
 
 let
-  cfg = config.userSettings.programs.zsh;
+  cfg = config.userSettings.zsh;
 in
 {
-  ### 1. تعريف الخيار (Option)
-  options.userSettings.programs.zsh = {
-    enable = lib.mkEnableOption "Enable Zsh with Home-Manager specific settings";
-  };
+  ### 1. تعريف الخيار (Option)
+  options.userSettings.zsh = {
+    enable = lib.mkEnableOption "Enable Zsh";
+  };
 
-  config = lib.mkIf cfg.enable {
-    programs.zsh = {
-      enable = true;
-      
-      autosuggestion.enable = true;   
-      syntaxHighlighting.enable = true;
+  ### 2. التنفيذ (Implementation)
+  config = lib.mkIf cfg.enable {
+    programs.zsh = {
+      enable = true;
+      
+      autosuggestion.enable = true;   
+      syntaxHighlighting.enable = true;
 
-      enableCompletion = true; 
-      history = {
-        size = 10000;
-        path = "${config.home.homeDirectory}/.zsh_history";
-      };
+      enableCompletion = true; 
+      history = {
+        size = 10000;
+        path = "${config.home.homeDirectory}/.zsh_history";
+      };
 
       shellAliases = {
         # نظام NixOS
@@ -31,6 +30,6 @@ in
         garbage = "nix-collect-garbage -d"; # تنظيف الملفات القديمة لتوفير مساحة
         cdconf = "cd ~/nixos-config"; # انتقال سريع لمجلد الإعدادات
       };
-    };
-  };
+    };
+  };
 }

@@ -4,23 +4,26 @@ let
   cfg = config.systemSettings.wsl;
 in
 {
+  # 1. الـ imports دائماً في البداية وخارج أي بلوك آخر
+  imports = [ inputs.nixos-wsl.nixosModules.default ];
+
   options.systemSettings.wsl = {
     enable = lib.mkEnableOption "Enable WSL Specific Configuration";
   };
 
+  # 2. التنفيذ (Implementation)
   config = lib.mkIf cfg.enable {
-    imports = [ inputs.nixos-wsl.nixosModules.default ];
-
+    # لاحظ أننا حذفنا imports من هنا
     environment.enableAllTerminfo = true;
 
     wsl = {
-      enable = true;
+      enable = true; # هذا السطر هو ما سيقوم بتفعيل موديول WSL فعلياً
       wslConf.automount.root = "/mnt";
       wslConf.interop.appendWindowsPath = false;
       wslConf.network.generateHosts = false;
       defaultUser = username;
       startMenuLaunchers = true;
-      docker-desktop.enable = false; # نتركه معطلاً لأننا سنستخدم Docker الخاص بنا
+      docker-desktop.enable = false;
     };
   };
 }
