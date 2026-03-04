@@ -16,13 +16,17 @@
         443
         59010
         59011
+        8384
       ];
       allowedUDPPorts = [
         59010
         59011
+        22000
+        21027
       ];
     };
   };
 
   environment.systemPackages = with pkgs; [ networkmanagerapplet ];
 }
+
