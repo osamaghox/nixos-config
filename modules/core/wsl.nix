@@ -16,7 +16,6 @@ in
 
     wsl = {
       enable = true; # هذا السطر هو ما سيقوم بتفعيل موديول WSL فعلياً
-      useSystemd = true;     
       wslConf.automount.root = "/mnt";
       wslConf.interop.appendWindowsPath = false;
       wslConf.network.generateHosts = false;
@@ -27,3 +26,4 @@ in
   };
 
 }
+
