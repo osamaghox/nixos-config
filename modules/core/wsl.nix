@@ -7,9 +7,7 @@
 }: {
 
     
-  imports = [
-    inputs.nixos-wsl.nixosModules.default
-  ];
+  imports = [ inputs.nixos-wsl.nixosModules.default ];
 
   # FIXME: change to your tz! look it up with "timedatectl list-timezones"
 
@@ -36,3 +34,4 @@
   };
 
 }
+
