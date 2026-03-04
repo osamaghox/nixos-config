@@ -1,25 +1,17 @@
-{ ... }:
+{ lib, ... }:
+
+let
+  # دالة لفحص ما إذا كان المجلد يحتوي على ملف default.nix
+  isModule = name: type:
+    (type == "regular" && lib.hasSuffix ".nix" name && name != "default.nix") ||
+    (type == "directory" && builtins.pathExists (./. + "/${name}/default.nix"));
+
+  # جلب كل المحتويات وتصفيتها
+  contents = builtins.readDir ./.;
+  modules = lib.filterAttrs isModule contents;
+
+in
 {
-  imports = [
-    ./nixpkgs.nix
-    ./bootloader.nix
-    ./wsl.nix
-    ./xserver.nix
-    ./gnome.nix
-    ./niri.nix
-    ./network.nix
-    ./pipewire.nix
-    ./security.nix
-    ./services.nix
-    ./system.nix
-    ./user.nix
-    ./home-manager.nix
-    ./virtualization.nix
-    ./docker.nix
-    ./zsh.nix
-  ];
+  # تحويل الأسماء المفلترة إلى مسارات كاملة للاستيراد
+  imports = map (name: ./. + "/${name}") (lib.attrNames modules);
 }
-
-
-
-

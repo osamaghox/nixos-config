@@ -1,41 +1,52 @@
-# configs to look for niri config in nixos
-# https://github.com/JotaFab/s13los/blob/main/modules/home/programs/niri/niri.nix
-# https://github.com/devluixos/luix_nix_config/tree/master/home/modules/niri
+{ config, lib, pkgs, inputs, username, ... }:
 
-
-{ config, pkgs,username, ... }:
+let
+  cfg = config.userSettings.niri;
+in
 {
-  imports = [
-    ./noctalia
-    ./audio
-    ./clipboard
-    ./notifications
-    ./screenshot
-    ./xwayland-satellite
-   # ./wallpaper-engine
-  ];
-	# xdg.configFile."niri/config.kdl".source = ./config.kdl;
+  options.userSettings.niri = {
+    enable = lib.mkEnableOption "Enable Niri and associated tools";
+  };
 
+  config = lib.mkIf cfg.enable {
 
-xdg.configFile."niri/config.kdl".source = 
+    imports = [ inputs.noctalia.homeModules.default ];
+
+    programs.noctalia-shell = {
+      enable = true;
+      systemd.enable = true;
+    };
+
+    home.packages = with pkgs; [
+      xwayland-satellite
+      pavucontrol
+      pamixer
+      playerctl
+      helvum
+      wl-clipboard
+      cliphist
+      wl-clip-persist
+      libnotify
+      grim
+      slurp
+      swappy
+    ];
+
+    xdg.configFile."niri/config.kdl".source = 
     config.lib.file.mkOutOfStoreSymlink "/home/${username}/nixos-config/modules/home/niri/config.kdl";
 
-
-
-
-	# xdg.configFile."swaylock/config".source = ./swaylock.conf;
-  # home.file.".local/bin/nws.sh".source = ./nws.sh;
+    systemd.user.services.xwayland-satellite = {
+      Unit = {
+        Description = "Xwayland satellite service";
+        After = [ "graphical-session.target" ];
+      };
+      Service = {
+        ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite :1";
+        Restart = "always";
+      };
+      Install = {
+        WantedBy = [ "graphical-session.target" ];
+      };
+    };
+  };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
