@@ -20,10 +20,6 @@ in
   services.upower.enable = true;
 
 
-environment.systemPackages = with pkgs; [
-    wayland
-    xwayland # لدعم تطبيقات X11 داخل Niri
-  ];
     
     # XDG Portals configuration for Wayland (niri)
     xdg.portal = {
@@ -42,4 +38,5 @@ environment.systemPackages = with pkgs; [
     };
   };
 }
+
 
